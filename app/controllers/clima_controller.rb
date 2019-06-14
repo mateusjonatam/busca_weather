@@ -1,0 +1,2 @@
+class ClimaController < ApplicationController
+end
