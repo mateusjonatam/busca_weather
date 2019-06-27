@@ -9,6 +9,8 @@ class FiveDaysForecast
     
         retorno = JSON.parse(Net::HTTP.get(URI(url)))
 
-
+        temperatura = {
+          "Hora": retorno["main"]["temp"] #
+}
     end
 end
