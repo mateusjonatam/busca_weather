@@ -17,6 +17,11 @@ class ComunicacaoWheater
                 "Pressão": retorno["main"]["pressure"],
                 "Umidade": retorno["main"]["humidity"],
                 "Temperatura máxima": retorno["main"]["temp_max"],
+                "Temperatura mínima": retorno["main"]["temp_min"],
+                "Vento": retorno["wind"]["speed"],
+                "Rajada": retorno["wind"]["deg"]
+                "Alvorada": Time.at(retorno["sys"]["sunrise"]),
+                "Crepusculo": Time.at(retorno["sys"]["sunset"]),
                 }
             end
         end
