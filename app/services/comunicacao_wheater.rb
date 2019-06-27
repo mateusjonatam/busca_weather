@@ -1,10 +1,17 @@
 class ComunicacaoWheater
 
-    def buscar(cidade)
+        def atual(cidade)
 
-        @cidade = cidade
-        url = "https://samples.openweathermap.org/data/2.5/weather?q=#{@cidade},uk&appid=03e0f7d40c9c2afd73ffd62cb2f82a34"
+            @cidade = cidade
+    
+            url = "http://api.openweathermap.org/data/2.5/weather?q=#{@cidade},BR&appid=03e0f7d40c9c2afd73ffd62cb2f82a34&units=metric"
+        
+            retorno = JSON.parse(Net::HTTP.get(URI(url)))
+    
+                }
+            end
+        end
+    end
 
-        retorno = JSON.parse(Net::HTTP.get(URI(url)))
     end
 end
